@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+AI Plagiarism Detector
+An AI-powered plagiarism detection tool built with React. This web application allows users to upload documents and check for plagiarism using a machine learning-based API. The application leverages Axios for making HTTP requests and handles plagiarism report generation with a modern, user-friendly interface.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+1. File Upload: Upload files in various formats (e.g., PDF, DOCX) for plagiarism checks.
+2. Real-time Status Updates: After uploading a document, the app polls for the scan status and retrieves plagiarism results in real-time.
+3. Responsive Design: A mobile-friendly interface ensures the application works well on all devices.
+Technologies Used
+1. frontend : react.js, html , tailwind css, javascript
+2. api : PlagarismScanner API
 
-## Available Scripts
 
-In the project directory, you can run:
+Getting Started
+Follow these instructions to get a copy of the project running on your local machine.
 
+Prerequisites
+Make sure you have the following installed:
+
+1. Node.js (version >= 12.x)
+2. npm (version >= 6.x)
+3. Have a plagarism search account at https://plagiarismsearch.com/ (you can use the free trial when you sign in for the first time  ) 
+
+Installing
+1. Clone the repository:
+### `git clone https://github.com/alanstan08/AIPlagarismDetector.git`
+2. In the main repo run :
+### `npm i`
+3. Set up your .env file with the API token received from the plagarism search
+### `REACT_APP_TOKEN={your token name}`
+4. Run the development server
 ### `npm start`
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Usage
+Once the app is running:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Upload a document by clicking on the "Upload" button.
+The app will send the document to the plagiarism detection API.
+The status of the scan will be polled every 10 seconds, and you’ll receive the result once the scan is completed.
+The plagiarism report will show the percentage of copied text and other relevant details.
 
-### `npm run build`
+Runs the app in the development mode.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+API Integration
+The app interacts with a third-party API to check for plagiarism. The API token (stored in environment variables) is passed as part of the Authorization header for all requests. The API response includes the status of the scan and the result details.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
